@@ -263,7 +263,7 @@ public class BluetoothPrinter extends CordovaPlugin {
 			//mmOutputStream.write(msg.getBytes());
 			
 			// Force Portuguese Encoding
-			byte[] bytes = msg.getBytes (Charset.forName("IBM860"));
+			byte[] bytes = msg.getBytes (Charset.forName("IBM850"));
 			mmOutputStream.write(bytes);
 
 			// tell the user data were sent
