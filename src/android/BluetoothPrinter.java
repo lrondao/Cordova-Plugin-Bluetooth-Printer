@@ -258,7 +258,11 @@ public class BluetoothPrinter extends CordovaPlugin {
 	boolean printText(CallbackContext callbackContext, String msg) throws IOException {
 		try {
 
-			mmOutputStream.write(msg.getBytes());
+			//mmOutputStream.write(msg.getBytes());
+			
+			// Force Portuguese Encoding
+			byte[] bytes = msg.getBytes (Charset.forName("IBM860"));
+			mmOutputStream.write(bytes);
 
 			// tell the user data were sent
 			//Log.d(LOG_TAG, "Data Sent");
