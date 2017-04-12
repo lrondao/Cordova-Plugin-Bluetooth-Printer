@@ -32,6 +32,8 @@ import android.graphics.Bitmap.Config;
 import android.util.Xml.Encoding;
 import android.util.Base64;
 
+import java.nio.charset.Charset;
+
 public class BluetoothPrinter extends CordovaPlugin {
 	private static final String LOG_TAG = "BluetoothPrinter";
 	BluetoothAdapter mBluetoothAdapter;
